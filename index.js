@@ -36,21 +36,30 @@
 
 
 // Objective 1 - Function to show port operational status
-let portStatus = "down"
-// if portStatus === "down"
-// return white text "down" with red background
+let portStatus = "Down" // Assume we can parse the API to get a variable we assign to portStatus
+if (portStatus.match("Down")){
+    console.log (`Port Status: ${portStatus}`) // Log our output.
+    console.log (`GUI: Return white text "Down" with red background to GUI`)// return white text "Down" with red background to GUI
+}
 
-// if portStatus === "up"
-// return white text "up" with green background
+if (portStatus.match("Up")){
+    console.log (`Port Status: ${portStatus}`) // Log our output.
+    console.log (`GUI: Return white text "Up" with green background TO GUI`)// return white text "up" with green background TO GUI
+}
 
-// if portStatus !== "up" && !== "down"
-// return white text "Error" with black background (port SHOULD always be up or down but can be in an error state)
+// Need a way to check the portStatus variable. If neither Down OR Up then return error
+// if (portStatus.match("Down")) || (portStatus.match("Up")){
+//     console.log (`Port Status: ERROR: ${portStatus}`); // Log our output.
+//     // return white text "ERROR: variable" with black background (port SHOULD always be up or down but can be in an error state)
+// }
 
-
+// Objective 2 - Show our port description
+let portDesc = "NONE" // Assume we can parse the API to get a variable we assign to portDesc
+console.log (`Port Description: ${portDesc}`) // Log our output.
 
 // Objective 5 - Function to do bit to MByte conversion
-let dataInBits = 12030543323
+let dataInBits = 12030543323 // Assume we can parse the API to get a variable we assign to dataInBits
 const dataInMBytes = dataInMBytes => dataInMBytes / 8 / 1024 / 1024; // convert bits (1b) to bytes (1B) (8b = 1B) to kiliobytes (1024B = 1kB) to megabytes (1024kB = 1mB)
-console.log (`Port shows ${dataInBits} bits passed. That is ${dataInMBytes(12030543323)} megabits.`) // Log our output.
+console.log (`Port shows ${dataInBits} bits passed. That is ${dataInMBytes(12030543323)}mB megabytes.`) // Log our output.
 
 
