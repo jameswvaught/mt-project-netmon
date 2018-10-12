@@ -36,11 +36,11 @@
 
 
 // Objective 1 - Function to show port operational status
-let portStatus = down
-// if portStatus === down
+let portStatus = "down"
+// if portStatus === "down"
 // return white text "down" with red background
 
-// if portStatus === up
+// if portStatus === "up"
 // return white text "up" with green background
 
 // if portStatus !== "up" && !== "down"
