@@ -35,9 +35,22 @@
 // This solution is completely reliant on pulling interesting data via API. The initial goals of this project will be somewhat dissatisfying to see fixed variables used as data sources. Eventual extension of the code to support the display of dynamic content is a must.
 
 
+// Objective 1 - Function to show port operational status
+let portStatus = down
+// if portStatus === down
+// return white text "down" with red background
+
+// if portStatus === up
+// return white text "up" with green background
+
+// if portStatus !== "up" && !== "down"
+// return white text "Error" with black background (port SHOULD always be up or down but can be in an error state)
+
 
 
 // Objective 5 - Function to do bit to MByte conversion
 let dataInBits = 12030543323
-const dataInMBytes = dataInMBytes => dataInMBytes / 8 / 1024 / 1024; // convert bits (1b) to bytes (8b/1B) to kiliobytes 1024B to megabytes
+const dataInMBytes = dataInMBytes => dataInMBytes / 8 / 1024 / 1024; // convert bits (1b) to bytes (1B) (8b = 1B) to kiliobytes (1024B = 1kB) to megabytes (1024kB = 1mB)
 console.log (`Port shows ${dataInBits} bits passed. That is ${dataInMBytes(12030543323)} megabits.`) // Log our output.
+
+
